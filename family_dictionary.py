@@ -13,5 +13,12 @@ pauls_family = {
   }
 }
 
-for a, b in pauls_family.items():
-  print(f'{b["name"]} is my {a} and is {str(b["age"])} years old.')
+family_list = []
+for keys, vals in pauls_family.items():
+  if vals['age'] == 1:
+    family_list.append((f'{vals["name"]} is my {keys} and is {str(vals["age"])} year old.'))
+  else:
+    family_list.append((f'{vals["name"]} is my {keys} and is {str(vals["age"])} years old.'))
+
+  
+print(family_list)
